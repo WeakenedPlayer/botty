@@ -11,7 +11,6 @@ export class DiscordBot {
                 
                 // register 'ready' event listener
                 this.client.once( 'ready', () => {
-                    console.log( this.client.channels.map( ( channel: TextChannel ) => 'id: ' + channel.id + ', ' + channel.name + ', ' + channel.guild.name ) );
                     resolve();
                 } );
                 
@@ -33,7 +32,5 @@ export class DiscordBot {
     async send( message: string ) {
         const channel = await this.client.channels.get( config.CHANNEL ) as TextChannel;
         channel.send( message );
-       
-
     }
 }

@@ -8,14 +8,17 @@ export class DiscordBotService {
     }
 
     async connect(): Promise<void> {
+        console.log( '[Connect]' );
         await this.bot.connect();
     }
     
     async send( message: string ) {
+        console.log( '[Send] ' + message );
         await this.bot.send( message );
     }
     
     async disconnect() {
+        console.log( '[Disconnect]' );
         await this.bot.disconnect();
     }
 }

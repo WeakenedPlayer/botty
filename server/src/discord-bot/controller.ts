@@ -18,13 +18,13 @@ export class DiscordBotController {
     constructor( private bot$: DiscordBotService ) {}
     
     @Post('message')
-    async message( @Body() messageDto: MessageDto ) {
-        await this.bot$.send( messageDto.message );
+    async message( @Body() message: MessageDto ) {
+        await this.bot$.send( message.message );
     }
     
     @Patch('server')
-    async connect( @Body() serverStatusDto: ServerStatusDto ) {
-        if( serverStatusDto.active ) {
+    async connect( @Body() serverStatus: ServerStatusDto ) {
+        if( serverStatus.active ) {
             await this.bot$.connect();
         } else {
             await this.bot$.disconnect();
