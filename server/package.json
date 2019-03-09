@@ -22,9 +22,11 @@
   "dependencies": {
     "@nestjs/common": "^5.4.0",
     "@nestjs/core": "^5.4.0",
+    "@nestjs/swagger": "^2.5.1",
+    "discord.js": "^11.4.2",
     "reflect-metadata": "^0.1.12",
     "rimraf": "^2.6.2",
-    "rxjs": "^6.2.2",
+    "rxjs": "^6.4.0",
     "typescript": "^3.0.1"
   },
   "devDependencies": {

@@ -48,3 +48,4 @@ package-lock.json
 *.bat
 *.db
 public
+config.ts
